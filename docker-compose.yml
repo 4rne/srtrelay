@@ -1,0 +1,10 @@
+version: '3'
+services:
+   srtrelay:
+     image: ghcr.io/voc/srtrelay/srtrelay:latest
+     restart: always
+     container_name: srtrelay
+     volumes:
+       - ./config.toml:/home/srtrelay/config.toml
+     ports:
+       - "44566:1337/udp"
